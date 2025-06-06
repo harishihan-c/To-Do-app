@@ -63,9 +63,33 @@
     color: white;
 }
 
-#list-container li{
+ul li{
     list-style: none;
-    padding: 20px 0 0 20px;
+    padding: 20px 0 0 55px;
     cursor: pointer;
     user-select:none;
+    position: relative;
+}
+
+ul li::before{
+    content:"";
+    width:24px;
+    height:24px;
+    position:absolute;
+    top:20px;
+    left: 20px;
+    border-radius: 50%;
+    background-image: url(./Images/unchecked.png);
+    background-position: center;
+    background-size: cover;
+}
+
+ul li.checked{
+    text-decoration:line-through;
+    color:#cc208e;
+}
+
+ul li.checked::before{
+    background-image: url(./Images/tick_17795294.png);
+
 }
